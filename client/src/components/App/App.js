@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DepartamentPage from '../DepartamentPage';
 
 class App extends Component {
   state = {
@@ -8,9 +9,9 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.callApi()
+    /* this.callApi()
       .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err)); */
   }
 
   callApi = async () => {
@@ -29,6 +30,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">{this.state.response}</p>
+        <DepartamentPage />
       </div>
     );
   }
