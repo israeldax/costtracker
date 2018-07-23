@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../Title';
-import Table from '../Table';
+import DepartmentTable from '../DepartmentTable';
 
 class DepartamentPage extends React.Component {
 
@@ -54,7 +54,7 @@ class DepartamentPage extends React.Component {
                     <button>Adicionar</button>
                 </form>
 
-                <Table feed={departamentsFiltered} handleDelete={this.handleDelete} />
+                <DepartmentTable feed={departamentsFiltered} handleDelete={this.handleDelete} />
             </section>
         )
     }

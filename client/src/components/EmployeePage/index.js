@@ -8,7 +8,6 @@ class EmployeePage extends React.Component {
     constructor(props) {
         super(props);
         this.handleSearchChange = this.handleSearchChange.bind(this);
-        //this.handleDepartmentChange = this.handleDepartmentChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.state = {
@@ -23,10 +22,6 @@ class EmployeePage extends React.Component {
     handleSearchChange(e) {
         this.setState({ search: e.target.value });
     }
-
-/*     handleDepartmentChange(e) {
-        this.setState({ depValue: e.target.value });
-    } */
     
     handleDelete(id) {
         this.setState(prevState => ({
@@ -72,12 +67,6 @@ class EmployeePage extends React.Component {
 
                     <div>
                         <label htmlFor="departamentID">Nome do Departamento:</label>
-                        {/**<select id="departamentID" value={depValue} onChange={this.handleDepartmentChange} >
-                            <option value="none">
-                                {departments.length ? 'Selecione um departamento' : 'Sem departamentos cadastrados'}
-                            </option>
-                            {departments.map(dep => <option key={dep.id} value={dep.id}>{dep.name}</option>)}
-        </select>**/}
                         <DepartmentSelect departments={departments} />
                     </div>
 
